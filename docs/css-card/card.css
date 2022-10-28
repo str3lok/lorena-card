@@ -612,6 +612,30 @@ html:not(.bx-touch) .card-tabs__item:hover span {
 									background-size: cover !important;
 	background-repeat: no-repeat !important;
 	display: block;
+	position: relative;
+	z-index: 1;
+}
+.card__color-hover {
+	position: absolute;
+	z-index: 5;
+	top: -313px;
+	left: 40px;
+	height: 340px;
+	width: 262px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s,visibility .2s;
+	background-size: cover !important;
+	background-position: top center;
+	border: 1px solid var(--thrid-color);
+	/* left: -225px; */
+}
+html:not(.bx-touch) .card__color--label:hover {
+	z-index: 2;
+}
+html:not(.bx-touch) .card__color--bg:hover .card__color-hover {
+	opacity: 1;
+	visibility: visible;
 }
 
 .card__color--name {
